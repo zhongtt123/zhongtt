@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--suppress ALL-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>商品编号</td>
+        <td>商品名称</td>
+        <td>商品价格</td>
+        <td>商品数量</td>
+        <td>生产时间</td>
+        <td>商品图片</td>
+    </tr>
+        <tr th:each="b:${ProductList}">
+            <td th:text="${b.id}">商品编号</td>
+            <td th:text="${b.name}">商品名称</td>
+            <td th:text="${b.price}">商品价格</td>
+            <td th:text="${b.stock}">商品数量</td>
+            <td th:text="${b.time}">生产时间</td>
+            <td th:text="${b.img}">商品图片</td>
+        </tr>
+    </table>
+</body>
+</html>
